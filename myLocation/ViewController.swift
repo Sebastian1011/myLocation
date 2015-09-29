@@ -42,8 +42,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
                 print(error, terminator: "")
                 return
             }
-            if (placemarks.count>0){
-                let pm = placemarks[0] as! CLPlacemark
+            if let pm = placemarks?.first {
                 self.displayLocationInfo(pm)
             }else{
                 print("problems with geocoder data", terminator: "")
@@ -57,12 +56,13 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     func displayLocationInfo(placemark: CLPlacemark){
         
         //停止地理信息更新以节省电池
+        let containsPlacemark = placemark
         locationManager.stopUpdatingLocation()
-        print(placemark.locality, terminator: "")
-        print(placemark.postalCode, terminator: "")
-        print(placemark.administrativeArea, terminator: "")
-        print(placemark.country, terminator: "")
-        print(placemark.addressDictionary, terminator: "")
+        let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
+        let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
+        let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
+        let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
+        myLocation.text = administrativeArea
         
     }
     
