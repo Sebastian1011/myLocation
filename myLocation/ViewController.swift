@@ -13,6 +13,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
 
     @IBOutlet weak var myLocation: UITextField!
     @IBOutlet weak var locatonButton: UIButton!
+    @IBOutlet weak var location1: UITextField!
+    @IBOutlet weak var location2: UITextField!
+    @IBOutlet weak var location3: UITextField!
     
 
     
@@ -63,6 +66,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
         let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
         myLocation.text = administrativeArea
+        location1.text = locality
+        location2.text = postalCode
+        location3.text = country
         
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,12 +18,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xQd-yQ-Zgw">
-                                <rect key="frame" x="252" y="229" width="97" height="30"/>
+                                <rect key="frame" x="252" y="219" width="97" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbm-fI-pRf">
-                                <rect key="frame" x="255" y="305" width="90" height="30"/>
+                                <rect key="frame" x="255" y="363" width="90" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="获取地理位置">
@@ -33,15 +35,43 @@
                                     <action selector="getMyLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ite-5b-gAK"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RJv-Lb-flm">
+                                <rect key="frame" x="252" y="160" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RY2-Dy-K5P">
+                                <rect key="frame" x="252" y="101" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Msk-wg-tOQ">
+                                <rect key="frame" x="252" y="278" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xQd-yQ-Zgw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="8QC-n8-ops"/>
+                            <constraint firstItem="xQd-yQ-Zgw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="8QC-n8-ops"/>
                             <constraint firstAttribute="centerX" secondItem="dbm-fI-pRf" secondAttribute="centerX" id="9SM-iD-3TE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xQd-yQ-Zgw" secondAttribute="trailing" constant="10" id="iFP-PE-YOG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Msk-wg-tOQ" secondAttribute="trailing" constant="50" id="CRe-7V-opT"/>
+                            <constraint firstItem="Msk-wg-tOQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="Cli-bX-FbL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RJv-Lb-flm" secondAttribute="trailing" constant="50" id="WvZ-Kq-sbf"/>
+                            <constraint firstItem="RY2-Dy-K5P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="gJh-9j-7lO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xQd-yQ-Zgw" secondAttribute="trailing" constant="50" id="iFP-PE-YOG"/>
+                            <constraint firstItem="RJv-Lb-flm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="rMh-1e-64J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RY2-Dy-K5P" secondAttribute="trailing" constant="50" id="rfY-HE-amF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="location1" destination="RY2-Dy-K5P" id="tEg-Hs-hHX"/>
+                        <outlet property="location2" destination="RJv-Lb-flm" id="vKL-c3-z3p"/>
+                        <outlet property="location3" destination="Msk-wg-tOQ" id="yma-Fd-piC"/>
                         <outlet property="locatonButton" destination="dbm-fI-pRf" id="mCZ-ef-F2a"/>
                         <outlet property="myLocation" destination="xQd-yQ-Zgw" id="eKa-8f-5Ho"/>
                     </connections>
